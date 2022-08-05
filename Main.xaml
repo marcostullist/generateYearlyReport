@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1153.33333333333,2752.66666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1153.33333333333,3274.66666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="38">
       <x:String>System.Activities</x:String>
@@ -77,7 +77,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="747.333333333333,2688" sap2010:WorkflowViewState.IdRef="Sequence_8">
+  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="747.333333333333,3210" sap2010:WorkflowViewState.IdRef="Sequence_8">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="user" />
       <Variable x:TypeArguments="x:String" Name="userEmail" />
@@ -96,28 +96,29 @@
       <Variable x:TypeArguments="x:String" Name="updateWorkDetailURL" />
       <Variable x:TypeArguments="x:String" Name="fullText" />
       <Variable x:TypeArguments="x:Int32" Name="lengthNoTaxID" />
+      <Variable x:TypeArguments="x:String" Name="downloadReportURL" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="705.333333333333,2596" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="705.333333333333,3118" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Process" sap:VirtualizedContainerService.HintSize="666.666666666667,2358.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Process" sap:VirtualizedContainerService.HintSize="666.666666666667,2880" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Get Home y Variables" sap:VirtualizedContainerService.HintSize="624.666666666667,237.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="Get Home y Variables" sap:VirtualizedContainerService.HintSize="624.666666666667,468" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:GetEnvironmentFolder DisplayName="Get Environment Folder" FolderPath="[user]" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetEnvironmentFolder_1" SpecialFolder="UserProfile">
+            <ui:GetEnvironmentFolder DisplayName="Get Environment Folder" FolderPath="[user]" sap:VirtualizedContainerService.HintSize="431.333333333333,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetEnvironmentFolder_1" SpecialFolder="UserProfile">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -125,7 +126,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:GetEnvironmentFolder>
-            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431.333333333333,283.333333333333" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -176,23 +177,31 @@
                       <InArgument x:TypeArguments="x:String">[clientDetailsURL + "/update/"]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[downloadReportURL]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[acmeURL + "reports/download"]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
                 </scg:List>
               </ui:MultipleAssign.AssignOperations>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:MultipleAssign>
           </Sequence>
-          <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: New Tab" sap:VirtualizedContainerService.HintSize="624.666666666667,1989.33333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="ddf8b6f5-1550-45c0-80cc-1ec30539bf9d" Version="V2">
+          <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: New Tab" sap:VirtualizedContainerService.HintSize="624.666666666667,2280" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="ddf8b6f5-1550-45c0-80cc-1ec30539bf9d" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="590.666666666667,1771.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="590.666666666667,2062" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -331,20 +340,20 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </WriteLine>
-                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[filteredDb]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="548.666666666667,882" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[filteredDb]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="548.666666666667,1172.66666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="514.666666666667,764" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="514.666666666667,1054.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence sap:VirtualizedContainerService.HintSize="472.666666666667,669.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <Sequence sap:VirtualizedContainerService.HintSize="472.666666666667,960" sap2010:WorkflowViewState.IdRef="Sequence_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -409,31 +418,25 @@
                                 </scg:List>
                               </ui:MultipleAssign.AssignOperations>
                             </ui:MultipleAssign>
-                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="430.666666666667,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                              <ui:CommentOut.Body>
-                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,175.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Url="[updateWorkDetailURL +CurrentRow.Item(&quot;WIID&quot;).ToString()]" Version="V1">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </uix:NGoToUrl>
-                                </Sequence>
-                              </ui:CommentOut.Body>
+                            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="430.666666666667,83.3333333333333" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Url="[downloadReportURL]" Version="V1">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                            </ui:CommentOut>
+                            </uix:NGoToUrl>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Vendor TaxID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="430.666666666667,220" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="ddf8b6f5-1550-45c0-80cc-1ec30539bf9d" Text="[taxID]" Version="V1">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/download" DesignTimeRectangle="209, 553, 728, 51" ElementType="InputBox" FriendlyName="'INPUT vendorTaxID'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="8370f9ec-b133-48fc-9ff9-199d32cfa82e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAtwAAAA3CAYAAAA/tZ0BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKSSURBVHhe7dvLTiJRGIXRfv9nkykjdeIAjFG0uEhQOZ1dwUqBaKTT/2ytZA9KC8ZfTg5/GgAAUEZwAwBAIcENAACFzgb3fD5v0+m0TSaTdnV1ZWZmZmZmZ5ZeTjenn79zFNzb7bb/wPX1df+hx8fH9vT01BaLhZmZmZmZjZZOTi/f39/3/ZyOTk+fOgruvHR3d9d/Qdd1bbVatfV6bWZmZmZmZ5ZeTjenn9PR6elTQ3DnRDtl/vLy0l5fX9tut2vv7+/9Pj4+zMzMzMxstM9WTjdvNpu+oz9viowNwZ0af3h46GM7X7Df7w//AQAAvpNuTnjnOkl6+vSUewjuXPjOkXheBgAALpOOTk+nq8eG4M6vLFPlTrYBAOBy6ej0dLp67Ci4c/9EcAMAwOXS0enpH4P77e3t8AQAAFwqPS24AQCgiOAGAIBCghsAAAoJbgAAKCS4AQCgkOAGAIBCghsAAAoJbgAAKCS4AQCgkOAGAIBCghsAAAoJbgAAKCS4AQCgkOAGAIBCghsAAAoJbgAAKCS4AQCgkOAGAIBCghsAAAoJbgAAKCS4AQCgkOAGAIBCghsAAAoJbgAAKCS4AQCgkOAGAIBCghsAAAoJbgAAKCS4AQCgkOAGAIBCghsAAAoJbgAAKCS4AQCgkOAGAIBCghsAAAoJbgAAKPRjcE8mk7bb7Q5PAADApdLT6eqxIbin02l7fn5u+/3+8BcAAOC30tHp6XT12BDc8/m83dzcCG4AAPgH6ej0dLp6bAjuSI3PZrPDEwAA8Fvp6NPT7TgK7u122790e3vblsul024AAPhBernrur6f09Hp6VNHwf0px+D5QC5851eWZmZmZmb2denldPPpNZKxs8ENAAD8D639Bbl2M+THPE5yAAAAAElFTkSuQmCC" InformativeScreenshot="f572fee2f482efab784842dc02b4b08f.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Download Monthly Report' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target DesignTimeRectangle="209, 515, 140, 30" ElementType="Text" FriendlyName="'Vendor TaxID'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Vendor TaxID:' check:innerText='Vendor TaxID:' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
                           </Sequence>
                         </Sequence>
                       </ActivityAction>
@@ -461,7 +464,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="574,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="671.333333333333,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -472,7 +475,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;Todo mal&quot;]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;Todo mal&quot;]" />
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
